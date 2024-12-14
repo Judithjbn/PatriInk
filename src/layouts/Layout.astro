@@ -21,8 +21,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "PatriInk"
+  : "Tatuajes para bodas | PatriInk";
 ---
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Tatuajes para bodas, barra libre de diseños en tu piel, tatuajes para eventos en Barcelona, el Baix Llobregat y toda Cataluña"
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -51,7 +51,7 @@ const makeTitle = title
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Tatuajes para bodas",
         },
       }}
     />
