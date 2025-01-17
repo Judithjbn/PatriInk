@@ -56,7 +56,10 @@ const makeTitle = title
       }}
     />
   </head>
-  <body style="background-color: #E7D9D0;" class="bg-[url('assets/tatus.png')] bg-cover bg-center bg-fixed bg-opacity-45" >
+  <body style="background-color: #E7D9D0;" class="relative">
+  <div class="fixed inset-0 z-[-1] opacity-45">
+    <img src="/src/assets/tatus.png" class="w-full h-full object-cover" alt="background pattern" />
+  </div>
     <Navbar />
     <slot />
     <Footer />
