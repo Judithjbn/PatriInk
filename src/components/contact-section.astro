@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 import contactImage from "../assets/intro.jpeg";
 ---
 
-<div id="contact" class="container mt-20 mx-auto px-6 ">
-  <div class="grid md:grid-cols-2 gap-10 items-center">
+<div id="contact" class="container mt-20 mx-auto px-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     <div>
       <h2 class="text-4xl font-bold mb-8">Contacto</h2>
       <Image 
@@ -14,7 +14,7 @@ import contactImage from "../assets/intro.jpeg";
         class="rounded-lg max-w-lg"
       />
     </div>
-    <div class="space-y-4 text-xl">
+    <div class="space-y-4 text-2xl md:text-xl">
       <p>Escribeme: <a href="mailto:patri@gmail.com" class="text-indigo-600 hover:text-indigo-800">patri@gmail.com</a></p>
       <p>Sigueme en instagram: <a href="https://instagram.com/Patri.inktattoo" target="_blank" class="text-indigo-600 hover:text-indigo-800">@Patri.inktattoo</a></p>
     </div>
