@@ -20,11 +20,25 @@ import logo from "../../assets/logo-patriink.png";
         <li><a href="#contact" class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100 uppercase">Contacto</a></li>
       </ul>
       <div class="lg:hidden">
-        <button class="text-white">
+        <button id="menu-toggle" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50">
+          <div class="flex flex-col items-center justify-center h-full text-2xl gap-8">
+            <button id="close-menu" class="absolute top-6 right-6 text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <a href="#features" class="text-black">Servicios</a>
+            <a href="#incluye" class="text-black">¿Qué incluye?</a>
+            <a href="#tarifas" class="text-black">Tarifas</a>
+            <a href="#gallery" class="text-black">Galería</a>
+            <a href="#contact" class="text-black">Contacto</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -35,6 +49,26 @@ import logo from "../../assets/logo-patriink.png";
   const header = document.getElementById('header');
   const logo = document.getElementById('logo');
   const navLinks = document.getElementById('nav-links');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+  });
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
