@@ -5,6 +5,7 @@ import Navbar from "@components/navbar/navbar.astro";
 import NoiseEffect from "@components/noise-effect.astro";
 import LoadingScreen from "@components/loading-screen.astro";
 import "@fontsource-variable/dm-sans/index.css";
+import backgroundBody from "../assets/tatus.png";
 
 
 
@@ -57,10 +58,10 @@ const makeTitle = title
       }}
     />
   </head>
-  <body style="background-color: #E7D9D0;" class="relative">
+  <body style="background-color: #f5eeea;" class="relative">
     <LoadingScreen />
   <div class="fixed inset-0 z-[-1] opacity-45">
-    <img src="/src/assets/tatus.png" class="w-full h-full object-cover" alt="background pattern" />
+    <img src={backgroundBody} class="w-full h-full object-cover" alt="background pattern" />
   </div>
   <NoiseEffect />
     <Navbar />

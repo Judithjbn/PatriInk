@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
+import image1 from "../assets/intro.jpeg";
 
 const features = [
   {
@@ -22,7 +23,7 @@ const features = [
 ];
 ---
 
-<div id="features" class="flex flex-col md:flex-row items-center justify-center py-20 gap-12">
+<div id="features" class="flex flex-col md:flex-row items-center justify-center gap-12">
     <div class="md:w-1/2">
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
         ¡Haz que tu boda sea inolvidable con tatuajes personalizados!
@@ -32,7 +33,7 @@ const features = [
       </p>
     </div>
     <div class="md:w-1/2">
-      <img src="../src/assets/intro.jpeg" alt="Tatuajes para bodas" class="rounded-lg shadow-md w-80" />
+      <img src={image1} alt="Tatuajes para bodas" class="rounded-lg shadow-md w-80" />
     </div>
   </div>
 </div>
@@ -49,7 +50,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div style="background-color: #6A1121;" class="mt-1 rounded-full p-2 w-10 h-10 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
