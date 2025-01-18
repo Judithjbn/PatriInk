@@ -7,12 +7,12 @@ import logo from "../../assets/logo-patriink.png";
 ---
 
 <Container>
-  <header class="fixed top-0 left-0 w-full z-50 bg-transparent">
-    <nav class="flex flex-col lg:flex-row justify-between items-center py-4 px-20">
+  <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-300">
+    <nav class="flex flex-col lg:flex-row justify-between items-center px-20">
       <a href="/">
-        <Image src={logo} alt="Logo Pat.Inked" class="w-28 h-0.44 drop-shadow-lg invert rounded-full" />
+        <Image src={logo} alt="Logo Pat.Inked" class="w-28 h-0.44 drop-shadow-lg invert rounded-full transition-all duration-300" id="logo" />
       </a>
-      <ul class="hidden lg:flex gap-8 text-white text-lg">
+      <ul class="hidden lg:flex gap-8 text-white text-lg transition-all duration-300" id="nav-links">
         <li><a href="#features" class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100 uppercase">Servicios</a></li>
         <li><a href="#incluye" class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100 uppercase">¿Qué incluye?</a></li>
         <li><a href="#tarifas" class="relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:transition-transform after:duration-300 hover:after:scale-x-100 uppercase">Tarifas</a></li>
@@ -29,3 +29,32 @@ import logo from "../../assets/logo-patriink.png";
     </nav>
   </header>
 </Container>
+
+
+<script>
+  const header = document.getElementById('header');
+  const logo = document.getElementById('logo');
+  const navLinks = document.getElementById('nav-links');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('bg-white', 'shadow-md');
+      header.classList.remove('bg-transparent');
+      logo.classList.remove('invert');
+      logo.classList.add('w-20');
+      logo.classList.remove('w-28');
+      navLinks.classList.remove('text-lg');
+      navLinks.classList.remove('text-white');
+      navLinks.classList.add('text-black');
+    } else {
+      header.classList.remove('bg-white', 'shadow-md');
+      header.classList.add('bg-transparent');
+      logo.classList.add('invert');
+      logo.classList.remove('w-20');
+      logo.classList.add('w-28');
+      navLinks.classList.add('text-sm');
+      navLinks.classList.add('text-white');
+      navLinks.classList.remove('text-black');
+    }
+  });
+</script>

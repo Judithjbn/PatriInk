@@ -4,14 +4,14 @@ import { Image } from "astro:assets";
 import contactImage from "../assets/intro.jpeg";
 ---
 
-<div id="contact" class="container mx-auto px-6 py-12">
+<div id="contact" class="container mt-20 mx-auto px-6 ">
   <div class="grid md:grid-cols-2 gap-10 items-center">
     <div>
       <h2 class="text-4xl font-bold mb-8">Contacto</h2>
       <Image 
         src={contactImage} 
         alt="Contact image"
-        class="rounded-lg w-full"
+        class="rounded-lg max-w-lg"
       />
     </div>
     <div class="space-y-4 text-xl">
