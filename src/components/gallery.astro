@@ -6,44 +6,44 @@ import image2 from "../assets/presentacion.jpeg";
 // TODO: Add more images when available
 ---
 
-<div id="gallery" class="container mx-auto px-6">
- <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">Portfolio</h2>
-  <div class="grid grid-cols-2 gap-4">
+<div id="gallery" class="container mx-auto px-4 sm:px-6">
+  <h2 class="text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-16">Portfolio</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="h-full">
       <Image 
         src={image1} 
         alt="Tattoo gallery"
-        class="w-full h-full object-cover rounded-lg"
+        class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
       />
     </div>
-    <div class="grid grid-rows-2 gap-4 h-full">
-      <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <Image 
           src={image2} 
           alt="Tattoo gallery"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
         <Image 
           src={image2} 
           alt="Tattoo gallery"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
         <Image 
           src={image2} 
           alt="Tattoo gallery"
-          class="w-full h-full object-cover rounded-lg"
+          class="hidden sm:block w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Image 
           src={image1} 
           alt="Tattoo gallery"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
         <Image 
           src={image1} 
           alt="Tattoo gallery"
-          class="w-full h-full object-cover rounded-lg"
+          class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
       </div>
     </div>

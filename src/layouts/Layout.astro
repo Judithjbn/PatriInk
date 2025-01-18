@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
+import NoiseEffect from "@components/noise-effect.astro";
 import "@fontsource-variable/dm-sans/index.css";
 
 
@@ -59,6 +60,7 @@ const makeTitle = title
   <div class="fixed inset-0 z-[-1] opacity-45">
     <img src="/src/assets/tatus.png" class="w-full h-full object-cover" alt="background pattern" />
   </div>
+  <NoiseEffect />
     <Navbar />
     <slot />
     <Footer />
