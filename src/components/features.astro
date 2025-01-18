@@ -23,7 +23,7 @@ const features = [
 ];
 ---
 
-<div id="features" class="flex flex-col md:flex-row items-center justify-center gap-12">
+<div id="features" class="flex flex-col md:flex-row items-center justify-center py-20 gap-12">
     <div class="md:w-1/2">
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
         ¡Haz que tu boda sea inolvidable con tatuajes personalizados!
@@ -51,7 +51,7 @@ const features = [
     features.map((item) => (
       <div class="flex gap-4 items-start">
         <div style="background-color: #6A1121;" class="mt-1 rounded-full p-2 w-10 h-10 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+          <Icon style="width: 1.5rem; height: 1.5rem;" class="text-white" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
