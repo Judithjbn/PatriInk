@@ -1,0 +1,51 @@
+
+---
+const planes = [
+  {
+    nombre: "Básico",
+    precio: "500€",
+    caracteristicas: [
+      "2 horas de servicio",
+      "Hasta 15 invitados",
+      "6 diseños a elegir"
+    ]
+  },
+  {
+    nombre: "Estándar",
+    precio: "700€",
+    caracteristicas: [
+      "3 horas de servicio",
+      "Hasta 25 invitados",
+      "8 diseños a elegir"
+    ]
+  },
+  {
+    nombre: "Premium",
+    precio: "900€",
+    caracteristicas: [
+      "4 horas de servicio",
+      "Hasta 35 invitados",
+      "10 diseños a elegir"
+    ]
+  }
+];
+---
+
+<div class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">Tarifas</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      {planes.map(plan => (
+        <div class="border rounded-lg p-8 text-center">
+          <h3 class="text-2xl font-semibold mb-4">{plan.nombre}</h3>
+          <p class="text-4xl font-bold mb-8">{plan.precio}</p>
+          <ul class="space-y-4">
+            {plan.caracteristicas.map(caracteristica => (
+              <li>{caracteristica}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
