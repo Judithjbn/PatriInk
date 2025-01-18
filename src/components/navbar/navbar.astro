@@ -8,7 +8,7 @@ import logo from "../../assets/logo-patriink.png";
 
 <Container>
   <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-300">
-    <nav class="flex flex-col lg:flex-row justify-between items-center py-4 px-20">
+    <nav class="flex flex-col lg:flex-row justify-between items-center px-20">
       <a href="/">
         <Image src={logo} alt="Logo Pat.Inked" class="w-28 h-0.44 drop-shadow-lg invert rounded-full transition-all duration-300" id="logo" />
       </a>
@@ -43,6 +43,7 @@ import logo from "../../assets/logo-patriink.png";
       logo.classList.remove('invert');
       logo.classList.add('w-20');
       logo.classList.remove('w-28');
+      navLinks.classList.remove('text-lg');
       navLinks.classList.remove('text-white');
       navLinks.classList.add('text-black');
     } else {
@@ -51,6 +52,7 @@ import logo from "../../assets/logo-patriink.png";
       logo.classList.add('invert');
       logo.classList.remove('w-20');
       logo.classList.add('w-28');
+      navLinks.classList.add('text-sm');
       navLinks.classList.add('text-white');
       navLinks.classList.remove('text-black');
     }
