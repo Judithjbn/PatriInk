@@ -8,7 +8,44 @@ import image2 from "../assets/presentacion.jpeg";
 
 <div id="gallery" class="container mx-auto px-4 sm:px-6">
   <h2 class="text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-16">Portfolio</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  
+  <!-- Mobile layout (1 column) -->
+  <div class="grid grid-cols-1 gap-4 lg:hidden">
+    <Image 
+      src={image1} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+    <Image 
+      src={image2} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+    <Image 
+      src={image1} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+    <Image 
+      src={image2} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+    <Image 
+      src={image1} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+    <Image 
+      src={image2} 
+      alt="Tattoo gallery"
+      class="w-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+    />
+  </div>
+
+  <!-- Desktop layout (2 columns) -->
+  <div class="hidden lg:grid lg:grid-cols-2 gap-4">
+    <!-- Left column - single large image -->
     <div class="h-full">
       <Image 
         src={image1} 
@@ -16,10 +53,18 @@ import image2 from "../assets/presentacion.jpeg";
         class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
       />
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    
+    <!-- Right column - 3+2 grid -->
+    <div class="flex flex-col gap-4">
+      <!-- Top row - 3 images -->
+      <div class="grid grid-cols-3 gap-4 h-1/2">
         <Image 
           src={image2} 
+          alt="Tattoo gallery"
+          class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+        />
+        <Image 
+          src={image1} 
           alt="Tattoo gallery"
           class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
@@ -27,21 +72,17 @@ import image2 from "../assets/presentacion.jpeg";
           src={image2} 
           alt="Tattoo gallery"
           class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
-        />
-        <Image 
-          src={image2} 
-          alt="Tattoo gallery"
-          class="hidden sm:block w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <!-- Bottom row - 2 images -->
+      <div class="grid grid-cols-2 gap-4 h-1/2">
         <Image 
           src={image1} 
           alt="Tattoo gallery"
           class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
         <Image 
-          src={image1} 
+          src={image2} 
           alt="Tattoo gallery"
           class="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
         />
