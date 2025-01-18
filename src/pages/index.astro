@@ -1,7 +1,8 @@
 ---
 import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
+import Gallery from "@components/gallery.astro";
+import ContactSection from "@components/contact-section.astro";
 import Hero from "@components/hero.astro";
 import Tarifas from "@components/tarifas.astro";
 import Layout from "@layouts/Layout.astro";
@@ -9,13 +10,14 @@ import Queincluye from "@components/queincluye.astro";
 ---
 
 <Layout title="">
+  <Hero />
   <Container>
-    <Hero />
     <div class="space-y-24">
       <Features />
       <Queincluye />
       <Tarifas />
-      <Cta />
+      <Gallery />
+      <ContactSection />
     </div>
   </Container>
 </Layout>
