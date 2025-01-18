@@ -35,7 +35,37 @@ const planes = [
     <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">Tarifas</h2>
     <div id="tarifas" class="grid md:grid-cols-3 gap-10">
       {planes.map(plan => (
-        <div class="border rounded-lg p-8 text-center">
+        <div class="relative p-8 text-center tarifa-card">
+          <div class="border-animation"></div>
+          <style>
+            .tarifa-card {
+              background: white;
+              border-radius: 0.5rem;
+              overflow: hidden;
+            }
+            
+            .border-animation {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: 
+                linear-gradient(90deg, #6A1121 50%, transparent 50%) repeat-x,
+                linear-gradient(90deg, #6A1121 50%, transparent 50%) repeat-x,
+                linear-gradient(0deg, #6A1121 50%, transparent 50%) repeat-y,
+                linear-gradient(0deg, #6A1121 50%, transparent 50%) repeat-y;
+              background-size: 24px 4px, 24px 4px, 4px 24px, 4px 24px;
+              background-position: 0 0, 0 100%, 0 0, 100% 0;
+              animation: border-dance 4s infinite linear;
+            }
+            
+            @keyframes border-dance {
+              100% {
+                background-position: 100% 0, -100% 100%, 0 -100%, 100% 100%;
+              }
+            }
+          </style>
           <h3 class="text-2xl font-semibold mb-4">{plan.nombre}</h3>
           <p class="text-4xl font-bold mb-8">{plan.precio}</p>
           <ul class="space-y-4">
