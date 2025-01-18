@@ -5,6 +5,7 @@ import Navbar from "@components/navbar/navbar.astro";
 import NoiseEffect from "@components/noise-effect.astro";
 import LoadingScreen from "@components/loading-screen.astro";
 import "@fontsource-variable/dm-sans/index.css";
+import "@fontsource/yanone-kaffeesatz";
 import backgroundBody from "../assets/tatus.png";
 
 
@@ -69,6 +70,11 @@ const makeTitle = title
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+      }
+
       img {
         content-visibility: auto;
       }
