@@ -50,19 +50,20 @@ const planes = [
               left: 0;
               right: 0;
               bottom: 0;
-              background: 
-                linear-gradient(90deg, #6A1121 50%, transparent 50%) repeat-x,
-                linear-gradient(90deg, #6A1121 50%, transparent 50%) repeat-x,
-                linear-gradient(0deg, #6A1121 50%, transparent 50%) repeat-y,
-                linear-gradient(0deg, #6A1121 50%, transparent 50%) repeat-y;
-              background-size: 24px 4px, 24px 4px, 4px 24px, 4px 24px;
-              background-position: 0 0, 0 100%, 0 0, 100% 0;
-              animation: border-dance 4s infinite linear;
+              border: 1px solid #6A1121;
+              border-radius: 0.5rem;
+              animation: pulse 2s infinite;
             }
             
-            @keyframes border-dance {
+            @keyframes pulse {
+              0% {
+                box-shadow: 0 0 0 0 rgba(106, 17, 33, 0.4);
+              }
+              70% {
+                box-shadow: 0 0 0 10px rgba(106, 17, 33, 0);
+              }
               100% {
-                background-position: 100% 0, -100% 100%, 0 -100%, 100% 100%;
+                box-shadow: 0 0 0 0 rgba(106, 17, 33, 0);
               }
             }
           </style>
