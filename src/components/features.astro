@@ -2,6 +2,7 @@
 // @ts-ignore
 import { Icon } from "astro-icon/components";
 import image1 from "../assets/intro.jpeg";
+import image2 from "../assets/bg-hero.jpg";
 
 const features = [
   {
@@ -37,26 +38,33 @@ const features = [
     </div>
   </div>
 </div>
-<div class="text-center mt-16 md:mt-0">
-  <h2 class="text-5xl lg:text-5xl font-bold lg:tracking-tight">
-    Barra libre de tatuajes
-  </h2>
-  <p class="text-xl md:text-lg mt-4 text-slate-600">
-    Nuestros tatuajes en estilo lineal son el detalle perfecto para tu boda. Podréis elegir la temática de los diseños y personalizar algunos para hacerlos aun más especiales.</br>
-    <span style="font-weight:bold">¡Un detalle único para un día inolvidable!</span>
-  </p>
-</div>
-<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex flex-col  gap-4 items-center">
-        <div style="background-color: #6A1121;" class="mt-1 rounded-full p-2 w-10 h-10 shrink-0">
-          <Icon style="width: 1.5rem; height: 1.5rem;" class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-        </div>
-      </div>
-    ))
-  }
+<div class="flex flex-col md:flex-row items-center justify-center py-20 gap-1">
+  <div class="">
+    <img src={image2.src} alt="Barra libre de tatuajes" class="rounded-lg shadow-md w-150" />
+  </div>
+  <div>
+    <div class="px-20 text-left mt-16 md:mt-0">
+      <h2 class="text-5xl lg:text-5xl font-bold lg:tracking-tight">
+        Barra libre de tatuajes
+      </h2>
+      <p class="text-xl md:text-lg mt-4 text-slate-600">
+        Nuestros tatuajes en estilo lineal son el detalle perfecto para tu boda. Podréis elegir la temática de los diseños y personalizar algunos para hacerlos aun más especiales.</br>
+        <span style="font-weight:bold">¡Un detalle único para un día inolvidable!</span>
+      </p>
+    </div>
+    <div class="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(2,_1fr)] gap-x-[0px] gap-y-[0px] sm:grid-cols-2 md:grid-cols-2 mt-16 gap-">
+      {
+        features.map((item) => (
+          <div class="flex flex-col  gap-4 items-center ">
+            <div style="background-color: #6A1121;" class="mt-2 rounded-full p-2 w-15 h-15 shrink-0">
+              <Icon style="width: 2rem; height: 2rem;" class="text-white" name={item.icon} />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </div>
